@@ -1,0 +1,16 @@
+{
+  "name": "manning_fain-moiseev",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "start": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/conduitl/manning_fain-moiseev.git"
+  },
+  "bugs": {
+    "url": "https://github.com/conduitl/manning_fain-moiseev/issues"
+  },
+  "homepage": "https://github.com/conduitl/manning_fain-moiseev#readme"
+}
