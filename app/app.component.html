@@ -1,4 +1,4 @@
-<!--<auction-navbar></auction-navbar>-->
+<auction-navbar></auction-navbar>
 Navbar
 <div class="container">
     <div class="row">
@@ -15,8 +15,8 @@ Navbar
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-4">
-                    <auction-product-item></auction-product-item>
+                <div *ngFor="let prod of products" class="col-sm-4">
+                    <auction-product-item [product]="prod"></auction-product-item>
                 </div>
             </div>
         </div>

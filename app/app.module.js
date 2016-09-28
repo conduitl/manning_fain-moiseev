@@ -11,8 +11,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var app_component_1 = require('./app.component');
+var navbar_component_1 = require('./navbar.component');
 var product_item_component_1 = require('./product-item.component');
 var stars_component_1 = require('./stars.component');
+var product_service_1 = require('./product.service');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -21,9 +23,11 @@ var AppModule = (function () {
             imports: [platform_browser_1.BrowserModule],
             declarations: [
                 app_component_1.AppComponent,
+                navbar_component_1.NavbarComponent,
                 product_item_component_1.ProductItemComponent,
                 stars_component_1.StarsComponent
             ],
+            providers: [product_service_1.ProductService],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])

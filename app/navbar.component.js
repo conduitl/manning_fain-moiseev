@@ -9,23 +9,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var product_service_1 = require('./product.service');
-var AppComponent = (function () {
-    function AppComponent(productService) {
-        this.productService = productService;
-        this.products = [];
-        this.products = this.productService.getProducts();
+var NavbarComponent = (function () {
+    function NavbarComponent() {
     }
-    AppComponent = __decorate([
+    NavbarComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            templateUrl: 'app/app.component.html',
-            styleUrls: ['app/app.component.css'],
-            encapsulation: core_1.ViewEncapsulation.None
+            selector: 'auction-navbar',
+            templateUrl: 'app/navbar.component.html'
         }), 
-        __metadata('design:paramtypes', [product_service_1.ProductService])
-    ], AppComponent);
-    return AppComponent;
+        __metadata('design:paramtypes', [])
+    ], NavbarComponent);
+    return NavbarComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.NavbarComponent = NavbarComponent;
+//# sourceMappingURL=navbar.component.js.map

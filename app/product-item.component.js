@@ -9,10 +9,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-// import { StarsComponent } from 'app/stars.component';
+var product_service_1 = require('./product.service');
 var ProductItemComponent = (function () {
     function ProductItemComponent() {
     }
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', product_service_1.Product)
+    ], ProductItemComponent.prototype, "product", void 0);
     ProductItemComponent = __decorate([
         core_1.Component({
             selector: 'auction-product-item',
