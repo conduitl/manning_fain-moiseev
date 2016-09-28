@@ -9,19 +9,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
+var router_1 = require('@angular/router');
+var ProductDetailComponent = (function () {
+    function ProductDetailComponent(route) {
+        this.productTitle = route.snapshot.params['prodTitle'];
     }
-    AppComponent = __decorate([
+    ProductDetailComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            templateUrl: 'app/app.component.html',
-            styleUrls: ['app/app.component.css'],
-            encapsulation: core_1.ViewEncapsulation.None
+            selector: 'auction-product-page',
+            template: "\n        <div>\n            <img src=\"http://placehold.it/830x320\">\n            <h4>{{productTitle}}</h4>\n        </div>\n    "
         }), 
-        __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+        __metadata('design:paramtypes', [router_1.ActivatedRoute])
+    ], ProductDetailComponent);
+    return ProductDetailComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.ProductDetailComponent = ProductDetailComponent;
+//# sourceMappingURL=product-detail.component.js.map

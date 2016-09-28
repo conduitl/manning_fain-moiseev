@@ -8,9 +8,4 @@ import { Product, ProductService } from './product.service';
     encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
-    products: Product[] = [];
-
-    constructor(private productService: ProductService) {
-        this.products = this.productService.getProducts();
-    }
  }

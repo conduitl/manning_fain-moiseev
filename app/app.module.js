@@ -14,6 +14,7 @@ var app_component_1 = require('./app.component');
 var navbar_component_1 = require('./navbar.component');
 var search_component_1 = require('./search.component');
 var footer_component_1 = require('./footer.component');
+var home_component_1 = require('./home.component');
 var carousel_component_1 = require('./carousel.component');
 var product_item_component_1 = require('./product-item.component');
 var stars_component_1 = require('./stars.component');
@@ -29,6 +30,7 @@ var AppModule = (function () {
                 navbar_component_1.NavbarComponent,
                 search_component_1.SearchComponent,
                 footer_component_1.FooterComponent,
+                home_component_1.HomeComponent,
                 carousel_component_1.CarouselComponent,
                 product_item_component_1.ProductItemComponent,
                 stars_component_1.StarsComponent
