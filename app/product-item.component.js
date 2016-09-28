@@ -9,26 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var platform_browser_1 = require('@angular/platform-browser');
-var app_component_1 = require('./app.component');
-var product_item_component_1 = require('./product-item.component');
-var stars_component_1 = require('./stars.component');
-var AppModule = (function () {
-    function AppModule() {
+// import { StarsComponent } from 'app/stars.component';
+var ProductItemComponent = (function () {
+    function ProductItemComponent() {
     }
-    AppModule = __decorate([
-        core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule],
-            declarations: [
-                app_component_1.AppComponent,
-                product_item_component_1.ProductItemComponent,
-                stars_component_1.StarsComponent
-            ],
-            bootstrap: [app_component_1.AppComponent]
+    ProductItemComponent = __decorate([
+        core_1.Component({
+            selector: 'auction-product-item',
+            templateUrl: 'app/product-item.component.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], AppModule);
-    return AppModule;
+    ], ProductItemComponent);
+    return ProductItemComponent;
 }());
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+exports.ProductItemComponent = ProductItemComponent;
+//# sourceMappingURL=product-item.component.js.map
