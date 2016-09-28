@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar.component';
+import { SearchComponent } from './search.component';
 import { ProductItemComponent } from './product-item.component';
 import { StarsComponent } from './stars.component';
 
@@ -13,6 +14,7 @@ import { ProductService } from './product.service';
     declarations: [ 
         AppComponent,
         NavbarComponent,
+        SearchComponent,
         ProductItemComponent,
         StarsComponent
     ],
