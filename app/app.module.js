@@ -13,6 +13,7 @@ var platform_browser_1 = require('@angular/platform-browser');
 var app_component_1 = require('./app.component');
 var navbar_component_1 = require('./navbar.component');
 var search_component_1 = require('./search.component');
+var footer_component_1 = require('./footer.component');
 var product_item_component_1 = require('./product-item.component');
 var stars_component_1 = require('./stars.component');
 var product_service_1 = require('./product.service');
@@ -26,6 +27,7 @@ var AppModule = (function () {
                 app_component_1.AppComponent,
                 navbar_component_1.NavbarComponent,
                 search_component_1.SearchComponent,
+                footer_component_1.FooterComponent,
                 product_item_component_1.ProductItemComponent,
                 stars_component_1.StarsComponent
             ],
