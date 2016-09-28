@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar.component';
 import { SearchComponent } from './search.component';
 import { FooterComponent } from './footer.component';
+import { CarouselComponent } from './carousel.component';
 import { ProductItemComponent } from './product-item.component';
 import { StarsComponent } from './stars.component';
 
@@ -17,6 +18,7 @@ import { ProductService } from './product.service';
         NavbarComponent,
         SearchComponent,
         FooterComponent,
+        CarouselComponent,
         ProductItemComponent,
         StarsComponent
     ],
