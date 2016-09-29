@@ -20,6 +20,7 @@ var ProductItemComponent = (function () {
     ProductItemComponent = __decorate([
         core_1.Component({
             selector: 'auction-product-item',
+            styleUrls: ['app/product-item.component.css'],
             templateUrl: 'app/product-item.component.html'
         }), 
         __metadata('design:paramtypes', [])
