@@ -9,9 +9,29 @@ export class Product {
   }
 }
 
+export class Review {
+  constructor(
+    public id: number,
+    public productId: number,
+    public timestamp: number,
+    public user: string,
+    public rating: number,
+    public comment: string) {
+  }
+}
+
 export class ProductService {
   getProducts(): Array<Product> {
     return products.map(p => new Product(p.id, p.title, p.price, p.rating, p.description, p.categories));
+  }
+  getProductById(productId: number): Product {
+    return products.find(p => p.id === productId);
+  }
+  getReviewsForProduct(productId: number): Review[] {
+    return reviews
+      .filter(r => r.productId === productId)
+      .map(r => new Review(r.id, r.productId, Date.parse(r.timestamp), 
+                           r.user, r.rating, r.comment));
   }
 }
 
@@ -65,3 +85,20 @@ var products = [
     "categories": ["books"]
   }
 ];
+
+var reviews = [
+  {
+    "id": 0,
+    "productId": 0,
+    "timestamp": "2014-05-20T02:17:00+00:00",
+    "user": "User 1",
+    "rating": 5,
+    "comment": "Aenean vestibulum velit id placerat posuere. Praesent..."},
+  {
+    "id": 1,
+    "productId": 0,
+    "timestamp": "2014-05-20T02:53:00+00:00",
+    "user": "User 2",
+    "rating": 3,
+    "comment": "Aenean vestibulum velit id placerat posuere. Praesent... "
+  }];

@@ -10,16 +10,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
+var product_service_1 = require('./product.service');
 var ProductDetailComponent = (function () {
-    function ProductDetailComponent(route) {
-        this.productTitle = route.snapshot.params['prodTitle'];
+    function ProductDetailComponent(route, productService) {
+        var prodId = parseInt(route.snapshot.params['productId']);
+        this.product = productService.getProductById(prodId);
+        this.reviews = productService.getReviewsForProduct(this.product.id);
     }
     ProductDetailComponent = __decorate([
         core_1.Component({
             selector: 'auction-product-page',
-            template: "\n        <div>\n            <img src=\"http://placehold.it/830x320\">\n            <h4>{{productTitle}}</h4>\n        </div>\n    "
+            templateUrl: 'app/product-detail.component.html'
         }), 
-        __metadata('design:paramtypes', [router_1.ActivatedRoute])
+        __metadata('design:paramtypes', [router_1.ActivatedRoute, product_service_1.ProductService])
     ], ProductDetailComponent);
     return ProductDetailComponent;
 }());

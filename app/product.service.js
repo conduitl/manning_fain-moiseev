@@ -11,11 +11,31 @@ var Product = (function () {
     return Product;
 }());
 exports.Product = Product;
+var Review = (function () {
+    function Review(id, productId, timestamp, user, rating, comment) {
+        this.id = id;
+        this.productId = productId;
+        this.timestamp = timestamp;
+        this.user = user;
+        this.rating = rating;
+        this.comment = comment;
+    }
+    return Review;
+}());
+exports.Review = Review;
 var ProductService = (function () {
     function ProductService() {
     }
     ProductService.prototype.getProducts = function () {
         return products.map(function (p) { return new Product(p.id, p.title, p.price, p.rating, p.description, p.categories); });
+    };
+    ProductService.prototype.getProductById = function (productId) {
+        return products.find(function (p) { return p.id === productId; });
+    };
+    ProductService.prototype.getReviewsForProduct = function (productId) {
+        return reviews
+            .filter(function (r) { return r.productId === productId; })
+            .map(function (r) { return new Review(r.id, r.productId, Date.parse(r.timestamp), r.user, r.rating, r.comment); });
     };
     return ProductService;
 }());
@@ -70,4 +90,20 @@ var products = [
         "categories": ["books"]
     }
 ];
+var reviews = [
+    {
+        "id": 0,
+        "productId": 0,
+        "timestamp": "2014-05-20T02:17:00+00:00",
+        "user": "User 1",
+        "rating": 5,
+        "comment": "Aenean vestibulum velit id placerat posuere. Praesent..." },
+    {
+        "id": 1,
+        "productId": 0,
+        "timestamp": "2014-05-20T02:53:00+00:00",
+        "user": "User 2",
+        "rating": 3,
+        "comment": "Aenean vestibulum velit id placerat posuere. Praesent... "
+    }];
 //# sourceMappingURL=product.service.js.map

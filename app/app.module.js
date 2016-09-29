@@ -31,7 +31,7 @@ var AppModule = (function () {
                 platform_browser_1.BrowserModule,
                 router_1.RouterModule.forRoot([
                     { path: '', component: home_component_1.HomeComponent },
-                    { path: 'products/:prodTitle', component: product_detail_component_1.ProductDetailComponent }
+                    { path: 'products/:productId', component: product_detail_component_1.ProductDetailComponent }
                 ])
             ],
             declarations: [
