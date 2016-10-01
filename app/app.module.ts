@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
-
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar.component';
@@ -16,9 +16,12 @@ import { ProductDetailComponent } from './product-detail.component';
 
 import { ProductService } from './product.service';
 
+import { FilterPipe } from './pipes/filter.pipe';
+
 @NgModule({
     imports: [ 
         BrowserModule,
+        FormsModule,
         RouterModule.forRoot([
             { path: '', component: HomeComponent },
             { path: 'products/:productId', component: ProductDetailComponent }
@@ -33,7 +36,8 @@ import { ProductService } from './product.service';
         CarouselComponent,
         ProductItemComponent,
         StarsComponent,
-        ProductDetailComponent
+        ProductDetailComponent,
+        FilterPipe,
     ],
     providers: [ ProductService,
         { provide: LocationStrategy, useClass: HashLocationStrategy }
