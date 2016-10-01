@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
@@ -22,6 +22,7 @@ import { FilterPipe } from './pipes/filter.pipe';
     imports: [ 
         BrowserModule,
         FormsModule,
+        ReactiveFormsModule,
         RouterModule.forRoot([
             { path: '', component: HomeComponent },
             { path: 'products/:productId', component: ProductDetailComponent }

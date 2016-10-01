@@ -32,6 +32,7 @@ var AppModule = (function () {
             imports: [
                 platform_browser_1.BrowserModule,
                 forms_1.FormsModule,
+                forms_1.ReactiveFormsModule,
                 router_1.RouterModule.forRoot([
                     { path: '', component: home_component_1.HomeComponent },
                     { path: 'products/:productId', component: product_detail_component_1.ProductDetailComponent }
